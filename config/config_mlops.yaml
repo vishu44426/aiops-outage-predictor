@@ -1,0 +1,20 @@
+# config/config_mlops.yaml
+# Centralized MLOps settings
+
+MLFLOW_TRACKING_URI: "http://127.0.0.1:5000"
+
+# --- Classic ML Model ---
+MODEL_NAME: "Outage_Predictor_GBM"
+
+# --- Embedding Model ---
+EMBEDDING_MODEL_REGISTRY_NAME: "AIOps_Embedding_Model"
+# Base model used *before* fine-tuning
+BASE_EMBEDDING_MODEL_FOR_RAG: "all-MiniLM-L6-v2"
+
+# --- RAG Vector DB Configuration ---
+# Suffix for ChromaDB directories (e.g., chroma_db_base, chroma_db_finetuned)
+RAG_DB_SUFFIX_BASE: "_base"
+RAG_DB_SUFFIX_FINETUNED: "_finetuned"
+
+# Centralized threshold for monitoring
+ALERT_THRESHOLD: 0.5

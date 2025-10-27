@@ -1,0 +1,26 @@
+# requirements.txt
+
+# for Classing ML
+pandas
+numpy
+scikit-learn
+xgboost
+mlflow
+faker
+PyYAML
+sqlalchemy
+fastapi
+uvicorn[standard]
+
+# for LLM/RAG
+datasets
+langchain
+langchain-core
+langchain
+chromadb # The vector database
+sentence-transformers # For creating embeddings
+transformers[torch]
+
+langchain-chroma
+langchain-huggingface
+# google-generativeai

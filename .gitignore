@@ -1,0 +1,47 @@
+# ------------------------------------
+# PYTHON SPECIFIC FILES
+# ------------------------------------
+__pycache__/
+*.pyc
+aiops-env/
+.aiops-env/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+
+# Virtual Environment
+aiops-env/
+.aiops-env/
+
+# Python build artifacts
+dist/
+build/
+*.egg-info/
+
+# Pytest cache
+.pytest_cache/
+
+# ------------------------------------
+# PROJECT ARTIFACTS (DB, Logs, Data)
+# ------------------------------------
+
+# 1. LOGS: Exclude the entire logs directory and its contents
+logs/
+
+# 2. DATABASE: Exclude the SQLite DB file
+# The schema file (master-reference-sql.sql) should be tracked, but the DB file itself should not.
+data/*.db
+data/chroma_db/
+
+# 3. ML artifacts
+mlartifacts/
+mlruns/
+models/
+# ------------------------------------
+# OPERATING SYSTEM / EDITOR FILES
+# ------------------------------------
+.DS_Store # macOS
+*~        # Linux/Unix backup files
+# VS Code
+.vscode/

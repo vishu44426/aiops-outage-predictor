@@ -1,0 +1,38 @@
+# config/config_data.yaml
+
+DATA:
+  DB_PATH: "data/log_outage_data.db"
+  TABLE_NAME: "server_logs"
+  
+  # Data Generation Parameters
+  TOTAL_SAMPLES: 10000
+  START_TIME: "2024-01-01 00:00:00"
+  LOG_RATE_PER_MIN: 1.0 # Average logs per minute
+  
+  # Populated missing lists
+  FAILURE_COMPONENTS:
+    - "Database"
+    - "Network"
+    - "API_Gateway"
+    - "Storage"
+    - "CPU"
+  SEVERITIES:
+    - "INFO"
+    - "WARNING"
+    - "ERROR"
+    - "CRITICAL"
+    
+  SEVERITY_PROBS: [0.90, 0.07, 0.025, 0.005] # Base probabilities for normal ops
+
+  # Outage Injection Parameters
+  NUM_OUTAGES: 100
+  PRECURSOR_WINDOW_MINUTES: 15
+  PRECURSOR_ERROR_RATE: 0.7 # Probability of WARN/ERROR during precursor
+
+  # Feature Engineering Parameters
+  ROLLING_WINDOW_MINUTES: 30
+
+  # Chronological Split Ratios
+  TRAIN_RATIO: 0.7
+  VAL_RATIO: 0.15
+  TEST_RATIO: 0.15
