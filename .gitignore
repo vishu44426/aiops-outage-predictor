@@ -37,7 +37,7 @@ data/chroma_db/
 # 3. ML artifacts
 mlartifacts/
 mlruns/
-models/
+
 # ------------------------------------
 # OPERATING SYSTEM / EDITOR FILES
 # ------------------------------------
